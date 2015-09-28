@@ -36,6 +36,10 @@ bind pad6 push right bar-resize:screenSizeX/2
 bind pad4 push left  bar-resize:screenSizeX/2
 bind pad8 push up    bar-resize:screenSizeY/2
 bind pad2 push down  bar-resize:screenSizeY/2
+bind 6:ctrl;alt;cmd push right bar-resize:screenSizeX/2
+bind 4:ctrl;alt;cmd push left  bar-resize:screenSizeX/2
+bind 8:ctrl;alt;cmd push up    bar-resize:screenSizeY/2
+bind 2:ctrl;alt;cmd push down  bar-resize:screenSizeY/2
 
 # Full screen
 bind pad5 move screenOriginX;screenOriginY screenSizeX;screenSizeY
@@ -46,11 +50,16 @@ bind pad9 ${topright}
 bind pad7 ${topleft}
 bind pad3 ${bottomright}
 bind pad1 ${bottomleft}
+bind 9:ctrl;alt;cmd ${topright}
+bind 7:ctrl;alt;cmd ${topleft}
+bind 3:ctrl;alt;cmd ${bottomright}
+bind 1:ctrl;alt;cmd ${bottomleft}
 
 # Misc
 bind padEnter throw right resize
 bind pad.     throw left resize
 bind pad0 focus behind
+bind 0:ctrl;alt;cmd focus behind
 bind pad* focus left
 bind pad- focus right
 
