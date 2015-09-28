@@ -1,2 +1,3 @@
 # Usage
-ln -s slate-config/slate ~/.slate
+
+    ln -s slate-config/slate ~/.slate
