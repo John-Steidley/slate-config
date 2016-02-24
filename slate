@@ -19,6 +19,8 @@ alias left        push   left         bar-resize:screenSizeX/2
 alias up          push   up           bar-resize:screenSizeY/2
 alias down        push   down         bar-resize:screenSizeY/2
 alias fullscreen  move   screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias nextscreen  throw  right        resize
+alias prevscreen  throw  left         resize
 
 # Push
 bind pad6 ${right}
@@ -45,8 +47,10 @@ bind 3:ctrl;alt;cmd ${bottomright}
 bind 1:ctrl;alt;cmd ${bottomleft}
 
 # Misc
-bind padEnter throw right resize
-bind pad.     throw left resize
+bind padEnter           ${nextscreen}
+bind right:ctrl;alt;cmd ${nextscreen}
+bind pad.               ${prevscreen}
+bind left:ctrl;alt;cmd  ${prevscreen}
 bind pad0 focus behind
 bind 0:ctrl;alt;cmd focus behind
 bind pad* focus left
