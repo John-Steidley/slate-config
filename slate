@@ -14,20 +14,25 @@ alias topleft     corner top-left     resize:screenSizeX/2;screenSizeY/2
 alias topright    corner top-right    resize:screenSizeX/2;screenSizeY/2
 alias bottomleft  corner bottom-left  resize:screenSizeX/2;screenSizeY/2
 alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
+alias right       push   right        bar-resize:screenSizeX/2
+alias left        push   left         bar-resize:screenSizeX/2
+alias up          push   up           bar-resize:screenSizeY/2
+alias down        push   down         bar-resize:screenSizeY/2
+alias fullscreen  move   screenOriginX;screenOriginY screenSizeX;screenSizeY
 
 # Push
-bind pad6 push right bar-resize:screenSizeX/2
-bind pad4 push left  bar-resize:screenSizeX/2
-bind pad8 push up    bar-resize:screenSizeY/2
-bind pad2 push down  bar-resize:screenSizeY/2
-bind 6:ctrl;alt;cmd push right bar-resize:screenSizeX/2
-bind 4:ctrl;alt;cmd push left  bar-resize:screenSizeX/2
-bind 8:ctrl;alt;cmd push up    bar-resize:screenSizeY/2
-bind 2:ctrl;alt;cmd push down  bar-resize:screenSizeY/2
+bind pad6 ${right}
+bind pad4 ${left}
+bind pad8 ${up}
+bind pad2 ${down}
+bind 6:ctrl;alt;cmd ${right}
+bind 4:ctrl;alt;cmd ${left}
+bind 8:ctrl;alt;cmd ${up}
+bind 2:ctrl;alt;cmd ${down}
 
-# Full screen
-bind pad5 move screenOriginX;screenOriginY screenSizeX;screenSizeY
-bind 5:ctrl;alt;cmd move screenOriginX;screenOriginY screenSizeX;screenSizeY
+# Fullscreen
+bind pad5 ${fullscreen}
+bind 5:ctrl;alt;cmd ${fullscreen}
 
 # Corners
 bind pad9 ${topright}
