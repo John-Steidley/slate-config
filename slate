@@ -8,28 +8,12 @@
 # Global configs (https://github.com/jigish/slate/wiki/Global-Configs)
 config defaultToCurrentScreen true
 
-config secondsBeforeRepeat 0.1
-config secondsBetweenRepeat 0.1
-
-config nudgePercentOf  screenSize
 config resizePercentOf screenSize
 
 alias topleft     corner top-left     resize:screenSizeX/2;screenSizeY/2
 alias topright    corner top-right    resize:screenSizeX/2;screenSizeY/2
 alias bottomleft  corner bottom-left  resize:screenSizeX/2;screenSizeY/2
 alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
-
-# Enlarge
-bind pad6:alt   resize +10% +0
-bind pad4:alt   resize +10% +0 bottom-right
-bind pad8:alt   resize +0   +10% bottom-right
-bind pad2:alt   resize +0   +10%
-
-# Shrink
-bind pad6:ctrl;alt  resize -10% +0 bottom-right
-bind pad2:ctrl;alt  resize +0   -10% bottom-right
-bind pad4:ctrl;alt  resize -10% +0
-bind pad8:ctrl;alt  resize +0   -10%
 
 # Push
 bind pad6 push right bar-resize:screenSizeX/2
@@ -62,15 +46,3 @@ bind pad0 focus behind
 bind 0:ctrl;alt;cmd focus behind
 bind pad* focus left
 bind pad- focus right
-
-# Nudge Bindings
-bind pad6:shift;alt nudge +10% +0
-bind pad4:shift;alt nudge -10% +0
-bind pad8:shift;alt nudge +0   -10%
-bind pad2:shift;alt nudge +0   +10%
-
-# Focus Bindings
-bind pad6:cmd focus right
-bind pad4:cmd focus left
-bind pad8:cmd focus up
-bind pad2:cmd focus down
