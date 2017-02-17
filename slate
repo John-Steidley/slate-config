@@ -18,6 +18,9 @@ alias right       push   right        bar-resize:screenSizeX/2
 alias left        push   left         bar-resize:screenSizeX/2
 alias up          push   up           bar-resize:screenSizeY/2
 alias down        push   down         bar-resize:screenSizeY/2
+alias firstThird  push   left         bar-resize:screenSizeX/3
+alias secondThird move   screenOriginX+screenSizeX/3+1;screenOriginY screenSizeX/3;screenSizeY
+alias thirdThird  push   right        bar-resize:screenSizeX/3
 alias fullscreen  move   screenOriginX;screenOriginY screenSizeX;screenSizeY
 alias nextscreen  throw  right        resize
 alias prevscreen  throw  left         resize
@@ -26,25 +29,26 @@ alias prevscreen  throw  left         resize
 bind pad6 ${right}
 bind pad4 ${left}
 bind pad8 ${up}
-bind pad2 ${down}
 bind 6:ctrl;alt;cmd ${right}
 bind 4:ctrl;alt;cmd ${left}
 bind 8:ctrl;alt;cmd ${up}
-bind 2:ctrl;alt;cmd ${down}
 
 # Fullscreen
 bind pad5 ${fullscreen}
 bind 5:ctrl;alt;cmd ${fullscreen}
 
+bind pad1 ${firstThird}
+bind 1:ctrl;alt;cmd ${firstThird}
+bind pad2 ${secondThird}
+bind 2:ctrl;alt;cmd ${secondThird}
+bind pad3 ${thirdThird}
+bind 3:ctrl;alt;cmd ${thirdThird}
+
 # Corners
 bind pad9 ${topright}
 bind pad7 ${topleft}
-bind pad3 ${bottomright}
-bind pad1 ${bottomleft}
 bind 9:ctrl;alt;cmd ${topright}
 bind 7:ctrl;alt;cmd ${topleft}
-bind 3:ctrl;alt;cmd ${bottomright}
-bind 1:ctrl;alt;cmd ${bottomleft}
 
 # Misc
 bind padEnter           ${nextscreen}
