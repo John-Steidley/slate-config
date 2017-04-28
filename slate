@@ -1,9 +1,4 @@
 # ~/.slate
-# You can install slate with:
-# brew cask install mattr-slate
-
-# You can learn more at:
-# https://github.com/mattr-/slate
 
 # Global configs (https://github.com/jigish/slate/wiki/Global-Configs)
 config defaultToCurrentScreen true
@@ -25,37 +20,23 @@ alias fullscreen  move   screenOriginX;screenOriginY screenSizeX;screenSizeY
 alias nextscreen  throw  right        resize
 alias prevscreen  throw  left         resize
 
-# Push
-bind pad6 ${right}
-bind pad4 ${left}
-bind pad8 ${up}
-bind 6:ctrl;alt;cmd ${right}
-bind 4:ctrl;alt;cmd ${left}
-bind 8:ctrl;alt;cmd ${up}
+alias firstTwoThirds push left bar-resize:screenSizeX*2/3
+alias secondTwoThirds move screenOriginX+screenSizeX/6+1;screenOriginY screenSizeX*2/3;screenSizeY
+alias thirdTwoThirds push right bar-resize:screenSizeX*2/3
 
-# Fullscreen
-bind pad5 ${fullscreen}
-bind 5:ctrl;alt;cmd ${fullscreen}
-
-bind pad1 ${firstThird}
 bind 1:ctrl;alt;cmd ${firstThird}
-bind pad2 ${secondThird}
 bind 2:ctrl;alt;cmd ${secondThird}
-bind pad3 ${thirdThird}
 bind 3:ctrl;alt;cmd ${thirdThird}
 
-# Corners
-bind pad9 ${topright}
-bind pad7 ${topleft}
-bind 9:ctrl;alt;cmd ${topright}
-bind 7:ctrl;alt;cmd ${topleft}
+bind 4:ctrl;alt;cmd ${left}
+bind 5:ctrl;alt;cmd ${fullscreen}
+bind 6:ctrl;alt;cmd ${right}
+
+bind 7:ctrl;alt;cmd ${firstTwoThirds}
+bind 8:ctrl;alt;cmd ${secondTwoThirds}
+bind 9:ctrl;alt;cmd ${thirdTwoThirds}
 
 # Misc
-bind padEnter           ${nextscreen}
 bind right:ctrl;alt;cmd ${nextscreen}
-bind pad.               ${prevscreen}
 bind left:ctrl;alt;cmd  ${prevscreen}
-bind pad0 focus behind
 bind 0:ctrl;alt;cmd focus behind
-bind pad* focus left
-bind pad- focus right
